@@ -17,27 +17,17 @@ const main = async()=>{
   let ok;
   for(let i= 0; i<cellsVivas; i++){
     do {
-      let x = Math.floor((Math.random() * ((rows-1) - 1 + 1)) + 0);
-      let y= Math.floor((Math.random() * ((columns-1) - 1 + 1)) + 0);
-      
+      let x = Math.floor((Math.random() * ((rows-2) - 1 + 1)) + 1);
+      let y= Math.floor((Math.random() * ((columns-2) - 1 + 1)) + 1);
       ok = matriz.fillLiveCells(x,y);
-      
     } while (ok == false);
   }
 
   matriz.imprimirMatriz();
 
 
-
-  /*let celulasVivas = [
-    [1, 4],
-    [2, 3],
-    [2, 4],
-  ];*/
-
-  //matriz.fillLiveCells(celulasVivas);
-  /*console.log("________________");
-  matriz.imprimirMatriz(matriz.siguienteGeneracion());*/
+  console.log("________________");
+  matriz.imprimirMatriz(matriz.siguienteGeneracion());
 }
 
 main();

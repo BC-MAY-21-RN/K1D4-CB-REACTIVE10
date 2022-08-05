@@ -42,8 +42,8 @@ export default class Matriz {
   }
 
   siguienteGeneracion() {
-    for (let y = 1; y < this.columns - 1; y++) {
-      for (let x = 1; x < this.rows - 1; x++) {
+    for (let y = 1; y < this.columns-1; y++) {
+      for (let x = 1; x < this.rows-1; x++) {
         let num = this.countNeighbours(x, y);
         if (this.matriz[x][y] == ".") {
           if (num == 3) this.matriz[x][y] = "*";
