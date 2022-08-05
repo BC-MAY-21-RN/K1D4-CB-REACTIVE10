@@ -1,4 +1,4 @@
-const Matriz = require("./models/matriz");
+import Matriz from "./models/matriz";
 //FUNCION PARA PRUEBA
 let matriz = new Matriz(8, 4);
 
@@ -24,7 +24,7 @@ const contarVecinosTotal = ()=>{
 //CELULA EN LA POSICION (2,3)
 const contarVecinosColumnasLaterales = ()=>{
     let count = 0;
-     count += matriz.contarLados(1,2); //Columna izquiera
+     count += matriz.contarLados(1,2); //Columna izquierda
      count += matriz.contarLados(1,4); //Columna derecha
 
      return count;
